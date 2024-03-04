@@ -11,9 +11,9 @@ jobs:
     - name: Install skopeo
       run: sudo apt-get install skopeo
     - name: Set up Go
-        uses: actions/setup-go@v5
-        with:
-          go-version-file: 'go.mod'
+      uses: actions/setup-go@v5
+      with:
+        go-version-file: 'go.mod'
     - name: Publish tekton images and generate release manifests
-      run: check-for-new-release.sh
+      run: ./check-for-new-release.sh
     
